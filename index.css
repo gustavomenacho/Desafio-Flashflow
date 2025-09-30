@@ -1,0 +1,119 @@
+.main-title {
+    color: var(--purple-200);
+}
+
+:root {
+    --purple-050: #F8F7FF;
+    --purple-100: #E7DDFF;
+    --purple-200: #8B5CF6;
+    --purple-300: #6A3FCB;
+    --white: #FFFFFF;
+    --gray-100: #E2E2E2;
+    --gray-200: #3F4658;
+    --gray-300: #1E1E1E;
+    --font-sora: 'Sora', sans-serif;
+    --font-inter: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--purple-050);
+    font-family: var(--font-inter), sans-serif;
+    color: var(--gray-300);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.card-counter {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--gray-200);
+}
+
+.flashcard-container {
+    width: 100%;
+    height: 250px;
+    perspective: 1000px; 
+    cursor: pointer;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.flashcard-container.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-front {
+    background-color: var(--white);
+    border: 1px solid var(--gray-100);
+}
+
+.card-front h1 {
+    font-family: var(--font-sora);
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--purple-300);
+    text-align: center;
+}
+
+.card-back {
+    background-color: var(--purple-100);
+    border: 1px solid var(--purple-200);
+    transform: rotateY(180deg); 
+}
+
+.card-back p {
+    font-family: var(--font-inter);
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--purple-300);
+    text-align: center;
+}
+
+.next-button {
+    background-color: var(--purple-300);
+    color: var(--white);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-family: var(--font-inter);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.next-button:hover {
+    background-color: var(--purple-200);
+}

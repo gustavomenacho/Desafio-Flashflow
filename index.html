@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlashFlow</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
+
+  <script src="index.js" defer></script>
+</head>
+
+<body>
+
+  <main class="container">
+    <h1 class="main-title">FlashFlow</h1>
+
+    <p class="card-counter" id="card-counter"></p>
+
+    <div class="flashcard-container" id="flashcard-container">
+      <div class="card-face card-front">
+        <h1 id="question"></h1>
+      </div>
+
+      <div class="card-face card-back">
+        <p id="answer"></p>
+      </div>
+    </div>
+
+    <p style="text-align:center; margin: 20px 0 10px 0; font-size: 1.1em; color: #3F4658;">Clique no card para ver a resposta</p>
+
+    <button class="next-button" id="next-button">Próximo Card</button>
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
